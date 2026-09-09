@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crops - Krishok Bondhu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-logo">Krishok Bondhu</div>
+            <p>Farmer's Friend - Agricultural Information Portal</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="crops.html">Crops</a></li>
+                <li><a href="fertilizer.html">Fertilizer Guide</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="disease.html">Disease Detection</a></li>
+                <li><a href="pricing.html">Market Prices</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Crop Information</h1>
+            <p>Explore detailed information about common crops in Bangladesh.</p>
+        </div>
+    </section>
+
+    <!-- Search Box -->
+    <section class="search-box">
+        <div class="container">
+            <input type="text" id="cropSearch" placeholder="Search crops...">
+        </div>
+    </section>
+
+    <!-- Crop Grid (populated by JavaScript) -->
+    <section class="crops-section">
+        <div class="container">
+            <div class="crops-grid" id="cropsGrid">
+                <!-- Crop cards will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h4>Krishok Bondhu</h4>
+                <p>A farmer's friend platform providing agricultural information and services.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="crops.html">Crops</a></p>
+                <p><a href="fertilizer.html">Fertilizer Guide</a></p>
+                <p><a href="weather.html">Weather</a></p>
+                <p><a href="disease.html">Disease Detection</a></p>
+                <p><a href="pricing.html">Market Prices</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Agricultural Information Service</p>
+                <p>support@krishokbondhu.gov.bd</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                &copy; 2026 Krishok Bondhu. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/crops.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // Load crop cards from cropsData array
+        document.addEventListener('DOMContentLoaded', function() {
+            const cropsGrid = document.getElementById('cropsGrid');
+            const crops = getAllCrops();
+
+            crops.forEach(crop => {
+                const card = document.createElement('div');
+                card.className = 'crop-card';
+                card.innerHTML = `
+                    <div class="crop-card-image">[ Image Placeholder ]</div>
+                    <div class="crop-card-content">
+                        <h3>${crop.name}</h3>
+                        <p>${crop.shortDescription}</p>
+                        <a href="crop.html?id=${crop.id}" class="btn">View Details</a>
+                    </div>
+                `;
+                cropsGrid.appendChild(card);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Detection - Krishok Bondhu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-logo">Krishok Bondhu</div>
+            <p>Farmer's Friend - Agricultural Information Portal</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="crops.html">Crops</a></li>
+                <li><a href="fertilizer.html">Fertilizer Guide</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="disease.html">Disease Detection</a></li>
+                <li><a href="pricing.html">Market Prices</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Disease Detection</h1>
+            <p>Upload an image of your crop to detect diseases.</p>
+        </div>
+    </section>
+
+    <!-- Disease Section -->
+    <section class="disease-section">
+        <div class="container">
+
+            <!-- Upload Area -->
+            <div class="upload-area">
+                <p>Select an image of your crop to analyze for diseases.</p>
+                <input type="file" id="diseaseImageInput" accept="image/*" onchange="previewImage(event)" style="display: none;">
+                <button class="btn" type="button" onclick="document.getElementById('diseaseImageInput').click()">Upload Image</button>
+            </div>
+
+            <!-- Preview Area (uses JS preview) -->
+            <div class="preview-area" id="previewArea">
+                <p>No image selected. The preview will appear here.</p>
+            </div>
+
+            <!-- Message about coming soon feature -->
+            <div class="disease-message">
+                <p><strong>Disease detection feature coming soon.</strong></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h4>Krishok Bondhu</h4>
+                <p>A farmer's friend platform providing agricultural information and services.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="crops.html">Crops</a></p>
+                <p><a href="fertilizer.html">Fertilizer Guide</a></p>
+                <p><a href="weather.html">Weather</a></p>
+                <p><a href="disease.html">Disease Detection</a></p>
+                <p><a href="pricing.html">Market Prices</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Agricultural Information Service</p>
+                <p>support@krishokbondhu.gov.bd</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                &copy; 2026 Krishok Bondhu. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Image preview functionality for disease detection
+        function previewImage(event) {
+            const file = event.target.files[0];
+            const previewArea = document.getElementById('previewArea');
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewArea.innerHTML = `<img src="${e.target.result}" alt="Uploaded image preview">`;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                previewArea.innerHTML = '<p>No image selected. The preview will appear here.</p>';
+            }
+        }
+    </script>
+</body>
+</html>

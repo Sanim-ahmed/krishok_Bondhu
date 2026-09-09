@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - Krishok Bondhu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-logo">Krishok Bondhu</div>
+            <p>Farmer's Friend - Agricultural Information Portal</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="crops.html">Crops</a></li>
+                <li><a href="fertilizer.html">Fertilizer Guide</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="disease.html">Disease Detection</a></li>
+                <li><a href="pricing.html">Market Prices</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Weather Information</h1>
+            <p>Current weather conditions for better farming decisions.</p>
+        </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather-section">
+        <div class="container">
+
+            <!-- Weather Location -->
+            <h2 id="weatherLocation">Dhaka, Bangladesh</h2>
+
+            <!-- Weather Cards (populated by JavaScript) -->
+            <div class="weather-grid" id="weatherGrid">
+                <!-- Weather data will be loaded here by JavaScript -->
+            </div>
+
+            <!-- Message about live weather connection -->
+            <div class="weather-message">
+                <p><strong>Note:</strong> Live weather will be connected later using FastAPI.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h4>Krishok Bondhu</h4>
+                <p>A farmer's friend platform providing agricultural information and services.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="crops.html">Crops</a></p>
+                <p><a href="fertilizer.html">Fertilizer Guide</a></p>
+                <p><a href="weather.html">Weather</a></p>
+                <p><a href="disease.html">Disease Detection</a></p>
+                <p><a href="pricing.html">Market Prices</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Agricultural Information Service</p>
+                <p>support@krishokbondhu.gov.bd</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                &copy; 2026 Krishok Bondhu. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/weather.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

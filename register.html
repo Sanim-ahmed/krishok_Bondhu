@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Krishok Bondhu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-left">
+                <div class="header-logo" data-i18n="site_name">Krishok Bondhu</div>
+                <p data-i18n="site_tagline">Farmer's Friend - Agricultural Information Portal</p>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="bn">বাং</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="crops.html" data-i18n="nav_crops">Crops</a></li>
+                <li><a href="fertilizer.html" data-i18n="nav_fertilizer">Fertilizer Guide</a></li>
+                <li><a href="weather.html" data-i18n="nav_weather">Weather</a></li>
+                <li><a href="disease.html" data-i18n="nav_disease">Disease Detection</a></li>
+                <li><a href="pricing.html" data-i18n="nav_pricing">Market Prices</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Auth Form -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-card">
+                <h2 data-i18n="register_title">Register</h2>
+                <div id="auth-error" class="auth-error" style="display:none;"></div>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="name" data-i18n="auth_name">Name</label>
+                        <input type="text" id="name" required data-i18n-placeholder="auth_name_placeholder" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="auth_email">Email</label>
+                        <input type="email" id="email" required data-i18n-placeholder="auth_email_placeholder" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" data-i18n="auth_phone">Phone (optional)</label>
+                        <input type="tel" id="phone" data-i18n-placeholder="auth_phone_placeholder" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" data-i18n="auth_password">Password</label>
+                        <input type="password" id="password" required minlength="6" data-i18n-placeholder="auth_password_placeholder2" placeholder="Min 6 characters">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword" data-i18n="auth_confirm_password">Confirm Password</label>
+                        <input type="password" id="confirmPassword" required minlength="6" data-i18n-placeholder="auth_confirm_password_placeholder" placeholder="Re-enter your password">
+                    </div>
+                    <button type="submit" class="btn auth-btn" data-i18n="register_btn">Register</button>
+                </form>
+                <p class="auth-switch">
+                    <span data-i18n="register_has_account">Already have an account?</span>
+                    <a href="login.html" data-i18n="register_login_link">Login</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const errorDiv = document.getElementById('auth-error');
+            errorDiv.style.display = 'none';
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                errorDiv.textContent = 'Passwords do not match';
+                errorDiv.style.display = 'block';
+                return;
+            }
+
+            try {
+                const res = await fetch('/api/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, phone: phone || null, password }),
+                });
+                const data = await res.json();
+                if (!res.ok) {
+                    errorDiv.textContent = data.detail || 'Registration failed';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                Auth.saveSession(data.token, data.user);
+                window.location.href = 'index.html';
+            } catch (err) {
+                errorDiv.textContent = 'Network error. Please try again.';
+                errorDiv.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

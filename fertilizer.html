@@ -11,8 +11,14 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="header-logo">Krishok Bondhu</div>
-            <p>Farmer's Friend - Agricultural Information Portal</p>
+            <div class="header-left">
+                <div class="header-logo" data-i18n="site_name">Krishok Bondhu</div>
+                <p data-i18n="site_tagline">Farmer's Friend - Agricultural Information Portal</p>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="bn">বাং</button>
+            </div>
         </div>
     </header>
 
@@ -20,12 +26,12 @@
     <nav class="nav">
         <div class="container">
             <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="crops.html">Crops</a></li>
-                <li><a href="fertilizer.html">Fertilizer Guide</a></li>
-                <li><a href="weather.html">Weather</a></li>
-                <li><a href="disease.html">Disease Detection</a></li>
-                <li><a href="pricing.html">Market Prices</a></li>
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="crops.html" data-i18n="nav_crops">Crops</a></li>
+                <li><a href="fertilizer.html" data-i18n="nav_fertilizer">Fertilizer Guide</a></li>
+                <li><a href="weather.html" data-i18n="nav_weather">Weather</a></li>
+                <li><a href="disease.html" data-i18n="nav_disease">Disease Detection</a></li>
+                <li><a href="pricing.html" data-i18n="nav_pricing">Market Prices</a></li>
             </ul>
         </div>
     </nav>
@@ -33,74 +39,74 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Fertilizer Guide</h1>
-            <p>Recommended fertilizers and application times for different crops.</p>
+            <h1 data-i18n="fertilizer_title">Fertilizer Guide</h1>
+            <p data-i18n="fertilizer_subtitle">Recommended fertilizers and application times for different crops.</p>
         </div>
     </section>
 
     <!-- Fertilizer Table -->
     <section class="table-section">
         <div class="container">
-            <h2>Fertilizer Recommendations</h2>
+            <h2 data-i18n="fertilizer_heading">Fertilizer Recommendations</h2>
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>Crop</th>
-                            <th>Fertilizer</th>
-                            <th>Application Time</th>
+                            <th data-i18n="fertilizer_th_crop">Crop</th>
+                            <th data-i18n="fertilizer_th_fertilizer">Fertilizer</th>
+                            <th data-i18n="fertilizer_th_time">Application Time</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Rice</td>
-                            <td>Urea, TSP, MoP</td>
-                            <td>Basal dose + 15 days after planting</td>
+                            <td data-i18n="fert_rice">Rice</td>
+                            <td data-i18n="fert_rice_fert">Urea, TSP, MoP</td>
+                            <td data-i18n="fert_rice_time">Basal dose + 15 days after planting</td>
                         </tr>
                         <tr>
-                            <td>Wheat</td>
-                            <td>Urea, TSP, Gypsum</td>
-                            <td>Basal dose + 21 days after sowing</td>
+                            <td data-i18n="fert_wheat">Wheat</td>
+                            <td data-i18n="fert_wheat_fert">Urea, TSP, Gypsum</td>
+                            <td data-i18n="fert_wheat_time">Basal dose + 21 days after sowing</td>
                         </tr>
                         <tr>
-                            <td>Potato</td>
-                            <td>DAP, Urea, MOP</td>
-                            <td>Basal dose + 30 days after planting</td>
+                            <td data-i18n="fert_potato">Potato</td>
+                            <td data-i18n="fert_potato_fert">DAP, Urea, MOP</td>
+                            <td data-i18n="fert_potato_time">Basal dose + 30 days after planting</td>
                         </tr>
                         <tr>
-                            <td>Tomato</td>
-                            <td>DAP, Urea, MOP</td>
-                            <td>Basal dose + 20 days after transplanting</td>
+                            <td data-i18n="fert_tomato">Tomato</td>
+                            <td data-i18n="fert_tomato_fert">DAP, Urea, MOP</td>
+                            <td data-i18n="fert_tomato_time">Basal dose + 20 days after transplanting</td>
                         </tr>
                         <tr>
-                            <td>Onion</td>
-                            <td>DAP, Urea, MOP</td>
-                            <td>Basal dose + 30 days after planting</td>
+                            <td data-i18n="fert_onion">Onion</td>
+                            <td data-i18n="fert_onion_fert">DAP, Urea, MOP</td>
+                            <td data-i18n="fert_onion_time">Basal dose + 30 days after planting</td>
                         </tr>
                         <tr>
-                            <td>Brinjal</td>
-                            <td>DAP, Urea, MOP, Compost</td>
-                            <td>Basal dose + 25 days after transplanting</td>
+                            <td data-i18n="fert_brinjal">Brinjal</td>
+                            <td data-i18n="fert_brinjal_fert">DAP, Urea, MOP, Compost</td>
+                            <td data-i18n="fert_brinjal_time">Basal dose + 25 days after transplanting</td>
                         </tr>
                         <tr>
-                            <td>Chili</td>
-                            <td>DAP, Urea, Compost</td>
-                            <td>Basal dose + 30 days after transplanting</td>
+                            <td data-i18n="fert_chili">Chili</td>
+                            <td data-i18n="fert_chili_fert">DAP, Urea, Compost</td>
+                            <td data-i18n="fert_chili_time">Basal dose + 30 days after transplanting</td>
                         </tr>
                         <tr>
-                            <td>Jute</td>
-                            <td>Urea, TSP, Gypsum</td>
-                            <td>Basal dose + 20 days after sowing</td>
+                            <td data-i18n="fert_jute">Jute</td>
+                            <td data-i18n="fert_jute_fert">Urea, TSP, Gypsum</td>
+                            <td data-i18n="fert_jute_time">Basal dose + 20 days after sowing</td>
                         </tr>
                         <tr>
-                            <td>Mustard</td>
-                            <td>DAP, Urea, Boron</td>
-                            <td>Basal dose + 25 days after sowing</td>
+                            <td data-i18n="fert_mustard">Mustard</td>
+                            <td data-i18n="fert_mustard_fert">DAP, Urea, Boron</td>
+                            <td data-i18n="fert_mustard_time">Basal dose + 25 days after sowing</td>
                         </tr>
                         <tr>
-                            <td>Lentil</td>
-                            <td>TSP, MoP, Urea</td>
-                            <td>All at basal dose before sowing</td>
+                            <td data-i18n="fert_lentil">Lentil</td>
+                            <td data-i18n="fert_lentil_fert">TSP, MoP, Urea</td>
+                            <td data-i18n="fert_lentil_time">All at basal dose before sowing</td>
                         </tr>
                     </tbody>
                 </table>
@@ -112,30 +118,32 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-section">
-                <h4>Krishok Bondhu</h4>
-                <p>A farmer's friend platform providing agricultural information and services.</p>
+                <h4 data-i18n="site_name">Krishok Bondhu</h4>
+                <p data-i18n="footer_desc">A farmer's friend platform providing agricultural information and services.</p>
             </div>
             <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="crops.html">Crops</a></p>
-                <p><a href="fertilizer.html">Fertilizer Guide</a></p>
-                <p><a href="weather.html">Weather</a></p>
-                <p><a href="disease.html">Disease Detection</a></p>
-                <p><a href="pricing.html">Market Prices</a></p>
+                <h4 data-i18n="footer_quick_links">Quick Links</h4>
+                <p><a href="crops.html" data-i18n="nav_crops">Crops</a></p>
+                <p><a href="fertilizer.html" data-i18n="nav_fertilizer">Fertilizer Guide</a></p>
+                <p><a href="weather.html" data-i18n="nav_weather">Weather</a></p>
+                <p><a href="disease.html" data-i18n="nav_disease">Disease Detection</a></p>
+                <p><a href="pricing.html" data-i18n="nav_pricing">Market Prices</a></p>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Agricultural Information Service</p>
+                <h4 data-i18n="footer_contact">Contact</h4>
+                <p data-i18n="footer_contact_name">Agricultural Information Service</p>
                 <p>support@krishokbondhu.gov.bd</p>
             </div>
         </div>
         <div class="container">
-            <div class="footer-bottom">
+            <div class="footer-bottom" data-i18n="copyright">
                 &copy; 2026 Krishok Bondhu. All rights reserved.
             </div>
         </div>
     </footer>
 
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

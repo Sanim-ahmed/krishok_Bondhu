@@ -11,8 +11,14 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="header-logo">Krishok Bondhu</div>
-            <p>Farmer's Friend - Agricultural Information Portal</p>
+            <div class="header-left">
+                <div class="header-logo" data-i18n="site_name">Krishok Bondhu</div>
+                <p data-i18n="site_tagline">Farmer's Friend - Agricultural Information Portal</p>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="bn">বাং</button>
+            </div>
         </div>
     </header>
 
@@ -20,12 +26,12 @@
     <nav class="nav">
         <div class="container">
             <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="crops.html">Crops</a></li>
-                <li><a href="fertilizer.html">Fertilizer Guide</a></li>
-                <li><a href="weather.html">Weather</a></li>
-                <li><a href="disease.html">Disease Detection</a></li>
-                <li><a href="pricing.html">Market Prices</a></li>
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="crops.html" data-i18n="nav_crops">Crops</a></li>
+                <li><a href="fertilizer.html" data-i18n="nav_fertilizer">Fertilizer Guide</a></li>
+                <li><a href="weather.html" data-i18n="nav_weather">Weather</a></li>
+                <li><a href="disease.html" data-i18n="nav_disease">Disease Detection</a></li>
+                <li><a href="pricing.html" data-i18n="nav_pricing">Market Prices</a></li>
             </ul>
         </div>
     </nav>
@@ -33,16 +39,16 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Welcome to Krishok Bondhu</h1>
-            <p>Your trusted companion for crop information, fertilizer guidance, and weather updates to help you grow better.</p>
+            <h1 data-i18n="hero_title">Welcome to Krishok Bondhu</h1>
+            <p data-i18n="hero_subtitle">Your trusted companion for crop information, fertilizer guidance, and weather updates to help you grow better.</p>
         </div>
     </section>
 
     <!-- Search Box -->
     <section class="search-box">
         <div class="container">
-            <input type="text" placeholder="Search crops, fertilizers, diseases...">
-            <button>Search</button>
+            <input type="text" data-i18n-placeholder="search_placeholder" placeholder="Search crops, fertilizers, diseases...">
+            <button data-i18n="search_btn">Search</button>
         </div>
     </section>
 
@@ -53,37 +59,37 @@
 
                 <!-- Crop Information Card -->
                 <div class="feature-card">
-                    <h3>Crop Information</h3>
-                    <p>Learn about cultivation practices, seasons, and requirements for various crops.</p>
-                    <a href="crops.html" class="btn">Explore Crops</a>
+                    <h3 data-i18n="feature_crop_title">Crop Information</h3>
+                    <p data-i18n="feature_crop_desc">Learn about cultivation practices, seasons, and requirements for various crops.</p>
+                    <a href="crops.html" class="btn" data-i18n="feature_crop_btn">Explore Crops</a>
                 </div>
 
                 <!-- Fertilizer Guide Card -->
                 <div class="feature-card">
-                    <h3>Fertilizer Guide</h3>
-                    <p>Find the right fertilizer for your crops and know when to apply them.</p>
-                    <a href="fertilizer.html" class="btn">Fertilizer Guide</a>
+                    <h3 data-i18n="feature_fertilizer_title">Fertilizer Guide</h3>
+                    <p data-i18n="feature_fertilizer_desc">Find the right fertilizer for your crops and know when to apply them.</p>
+                    <a href="fertilizer.html" class="btn" data-i18n="feature_fertilizer_btn">Fertilizer Guide</a>
                 </div>
 
                 <!-- Weather Card -->
                 <div class="feature-card">
-                    <h3>Weather</h3>
-                    <p>Check temperature, humidity, rainfall, and wind speed for better planning.</p>
-                    <a href="weather.html" class="btn">Weather Updates</a>
+                    <h3 data-i18n="feature_weather_title">Weather</h3>
+                    <p data-i18n="feature_weather_desc">Check temperature, humidity, rainfall, and wind speed for better planning.</p>
+                    <a href="weather.html" class="btn" data-i18n="feature_weather_btn">Weather Updates</a>
                 </div>
 
                 <!-- Disease Detection Card -->
                 <div class="feature-card">
-                    <h3>Disease Detection</h3>
-                    <p>Upload plant images to detect diseases and find treatment suggestions.</p>
-                    <a href="disease.html" class="btn">Detect Disease</a>
+                    <h3 data-i18n="feature_disease_title">Disease Detection</h3>
+                    <p data-i18n="feature_disease_desc">Upload plant images to detect diseases and find treatment suggestions.</p>
+                    <a href="disease.html" class="btn" data-i18n="feature_disease_btn">Detect Disease</a>
                 </div>
 
                 <!-- Market Prices Card -->
                 <div class="feature-card">
-                    <h3>Market Prices</h3>
-                    <p>Check current market prices for crops to plan your sales better.</p>
-                    <a href="pricing.html" class="btn">View Prices</a>
+                    <h3 data-i18n="feature_pricing_title">Market Prices</h3>
+                    <p data-i18n="feature_pricing_desc">Check current market prices for crops to plan your sales better.</p>
+                    <a href="pricing.html" class="btn" data-i18n="feature_pricing_btn">View Prices</a>
                 </div>
 
             </div>
@@ -94,30 +100,32 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-section">
-                <h4>Krishok Bondhu</h4>
-                <p>A farmer's friend platform providing agricultural information and services.</p>
+                <h4 data-i18n="site_name">Krishok Bondhu</h4>
+                <p data-i18n="footer_desc">A farmer's friend platform providing agricultural information and services.</p>
             </div>
             <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="crops.html">Crops</a></p>
-                <p><a href="fertilizer.html">Fertilizer Guide</a></p>
-                <p><a href="weather.html">Weather</a></p>
-                <p><a href="disease.html">Disease Detection</a></p>
-                <p><a href="pricing.html">Market Prices</a></p>
+                <h4 data-i18n="footer_quick_links">Quick Links</h4>
+                <p><a href="crops.html" data-i18n="nav_crops">Crops</a></p>
+                <p><a href="fertilizer.html" data-i18n="nav_fertilizer">Fertilizer Guide</a></p>
+                <p><a href="weather.html" data-i18n="nav_weather">Weather</a></p>
+                <p><a href="disease.html" data-i18n="nav_disease">Disease Detection</a></p>
+                <p><a href="pricing.html" data-i18n="nav_pricing">Market Prices</a></p>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Agricultural Information Service</p>
+                <h4 data-i18n="footer_contact">Contact</h4>
+                <p data-i18n="footer_contact_name">Agricultural Information Service</p>
                 <p>support@krishokbondhu.gov.bd</p>
             </div>
         </div>
         <div class="container">
-            <div class="footer-bottom">
+            <div class="footer-bottom" data-i18n="copyright">
                 &copy; 2026 Krishok Bondhu. All rights reserved.
             </div>
         </div>
     </footer>
 
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

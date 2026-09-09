@@ -1,6 +1,5 @@
 /* Krishok Bondhu - Weather JavaScript */
 
-// Sample weather data (static placeholder for now)
 const sampleWeatherData = {
     temperature: "28°C",
     humidity: "75%",
@@ -9,37 +8,31 @@ const sampleWeatherData = {
     location: "Dhaka, Bangladesh"
 };
 
-// Function to display weather data (placeholder until FastAPI is connected)
 function displayWeatherData() {
     const weatherGrid = document.getElementById('weatherGrid');
     if (!weatherGrid) return;
+    weatherGrid.innerHTML = '';
 
-    // Static data for now - will be replaced with API calls later
     const weatherItems = [
-        { label: 'Temperature', value: sampleWeatherData.temperature, unit: '' },
-        { label: 'Humidity', value: sampleWeatherData.humidity, unit: '' },
-        { label: 'Rainfall', value: sampleWeatherData.rainfall, unit: '' },
-        { label: 'Wind Speed', value: sampleWeatherData.windSpeed, unit: '' }
+        { key: 'weather_temperature', value: sampleWeatherData.temperature },
+        { key: 'weather_humidity', value: sampleWeatherData.humidity },
+        { key: 'weather_rainfall', value: sampleWeatherData.rainfall },
+        { key: 'weather_wind_speed', value: sampleWeatherData.windSpeed }
     ];
 
     weatherItems.forEach(item => {
         const card = document.createElement('div');
         card.className = 'weather-card';
         card.innerHTML = `
-            <h4>${item.label}</h4>
+            <h4>${I18n.t(item.key)}</h4>
             <div class="value">${item.value}</div>
-            <div class="unit">${item.unit}</div>
         `;
         weatherGrid.appendChild(card);
     });
 }
 
-// Future function to connect to FastAPI
-function fetchLiveWeather() {
-    // TODO: Connect to FastAPI backend
-    // const response = await fetch('/api/weather');
-    // const data = await response.json();
-    // Update the weather display
+function onLanguageChange() {
+    displayWeatherData();
 }
 
 document.addEventListener('DOMContentLoaded', function() {

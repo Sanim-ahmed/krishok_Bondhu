@@ -11,8 +11,14 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="header-logo">Krishok Bondhu</div>
-            <p>Farmer's Friend - Agricultural Information Portal</p>
+            <div class="header-left">
+                <div class="header-logo" data-i18n="site_name">Krishok Bondhu</div>
+                <p data-i18n="site_tagline">Farmer's Friend - Agricultural Information Portal</p>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="bn">বাং</button>
+            </div>
         </div>
     </header>
 
@@ -20,12 +26,12 @@
     <nav class="nav">
         <div class="container">
             <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="crops.html">Crops</a></li>
-                <li><a href="fertilizer.html">Fertilizer Guide</a></li>
-                <li><a href="weather.html">Weather</a></li>
-                <li><a href="disease.html">Disease Detection</a></li>
-                <li><a href="pricing.html">Market Prices</a></li>
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="crops.html" data-i18n="nav_crops">Crops</a></li>
+                <li><a href="fertilizer.html" data-i18n="nav_fertilizer">Fertilizer Guide</a></li>
+                <li><a href="weather.html" data-i18n="nav_weather">Weather</a></li>
+                <li><a href="disease.html" data-i18n="nav_disease">Disease Detection</a></li>
+                <li><a href="pricing.html" data-i18n="nav_pricing">Market Prices</a></li>
             </ul>
         </div>
     </nav>
@@ -33,110 +39,110 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Crop Market Prices</h1>
-            <p>Current market rates to help you plan your sales.</p>
+            <h1 data-i18n="pricing_title">Crop Market Prices</h1>
+            <p data-i18n="pricing_subtitle">Current market rates to help you plan your sales.</p>
         </div>
     </section>
 
     <!-- Market Price Table -->
     <section class="table-section">
         <div class="container">
-            <h2>Sample Market Prices (BDT)</h2>
+            <h2 data-i18n="pricing_heading">Sample Market Prices (BDT)</h2>
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>Crop</th>
-                            <th>Variety / Type</th>
-                            <th>Market</th>
-                            <th>Price Range (Tk)</th>
-                            <th>Unit</th>
+                            <th data-i18n="pricing_th_crop">Crop</th>
+                            <th data-i18n="pricing_th_variety">Variety / Type</th>
+                            <th data-i18n="pricing_th_market">Market</th>
+                            <th data-i18n="pricing_th_price">Price Range (Tk)</th>
+                            <th data-i18n="pricing_th_unit">Unit</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Rice</td>
-                            <td>Coarse</td>
-                            <td>Dhaka</td>
-                            <td>50 - 52</td>
-                            <td>per kg</td>
+                            <td data-i18n="price_rice_coarse">Rice</td>
+                            <td data-i18n="price_rice_coarse_variety">Coarse</td>
+                            <td data-i18n="price_rice_coarse_market">Dhaka</td>
+                            <td data-i18n="price_rice_coarse_range">50 - 52</td>
+                            <td data-i18n="price_rice_coarse_unit">per kg</td>
                         </tr>
                         <tr>
-                            <td>Rice</td>
-                            <td>Medium</td>
-                            <td>Dhaka</td>
-                            <td>55 - 57</td>
-                            <td>per kg</td>
+                            <td data-i18n="price_rice_medium">Rice</td>
+                            <td data-i18n="price_rice_medium_variety">Medium</td>
+                            <td data-i18n="price_rice_medium_market">Dhaka</td>
+                            <td data-i18n="price_rice_medium_range">55 - 57</td>
+                            <td data-i18n="price_rice_medium_unit">per kg</td>
                         </tr>
                         <tr>
-                            <td>Rice</td>
-                            <td>Fine (Miniket)</td>
-                            <td>Dhaka</td>
-                            <td>68 - 75</td>
-                            <td>per kg</td>
+                            <td data-i18n="price_rice_fine">Rice</td>
+                            <td data-i18n="price_rice_fine_variety">Fine (Miniket)</td>
+                            <td data-i18n="price_rice_fine_market">Dhaka</td>
+                            <td data-i18n="price_rice_fine_range">68 - 75</td>
+                            <td data-i18n="price_rice_fine_unit">per kg</td>
                         </tr>
                         <tr>
-                            <td>Wheat</td>
-                            <td>Common</td>
-                            <td>Wholesale</td>
-                            <td>32 - 45</td>
-                            <td>per kg</td>
+                            <td data-i18n="price_wheat">Wheat</td>
+                            <td data-i18n="price_wheat_variety">Common</td>
+                            <td data-i18n="price_wheat_market">Wholesale</td>
+                            <td data-i18n="price_wheat_range">32 - 45</td>
+                            <td data-i18n="price_wheat_unit">per kg</td>
                         </tr>
                         <tr>
-                            <td>Potato</td>
-                            <td>Common</td>
-                            <td>Dhaka</td>
-                            <td>36 - 45</td>
-                            <td>per kg</td>
+                            <td data-i18n="price_potato">Potato</td>
+                            <td data-i18n="price_potato_variety">Common</td>
+                            <td data-i18n="price_potato_market">Dhaka</td>
+                            <td data-i18n="price_potato_range">36 - 45</td>
+                            <td data-i18n="price_potato_unit">per kg</td>
                         </tr>
                         <tr>
-                            <td>Tomato</td>
-                            <td>Deshi / Hybrid</td>
-                            <td>Dhaka</td>
-                            <td>25 - 40</td>
-                            <td>per kg</td>
+                            <td data-i18n="price_tomato">Tomato</td>
+                            <td data-i18n="price_tomato_variety">Deshi / Hybrid</td>
+                            <td data-i18n="price_tomato_market">Dhaka</td>
+                            <td data-i18n="price_tomato_range">25 - 40</td>
+                            <td data-i18n="price_tomato_unit">per kg</td>
                         </tr>
                         <tr>
-                            <td>Onion</td>
-                            <td>Local</td>
-                            <td>Dhaka</td>
-                            <td>50 - 60</td>
-                            <td>per kg</td>
+                            <td data-i18n="price_onion">Onion</td>
+                            <td data-i18n="price_onion_variety">Local</td>
+                            <td data-i18n="price_onion_market">Dhaka</td>
+                            <td data-i18n="price_onion_range">50 - 60</td>
+                            <td data-i18n="price_onion_unit">per kg</td>
                         </tr>
                         <tr>
-                            <td>Brinjal</td>
-                            <td>Common</td>
-                            <td>Dhaka</td>
-                            <td>30 - 50</td>
-                            <td>per kg</td>
+                            <td data-i18n="price_brinjal">Brinjal</td>
+                            <td data-i18n="price_brinjal_variety">Common</td>
+                            <td data-i18n="price_brinjal_market">Dhaka</td>
+                            <td data-i18n="price_brinjal_range">30 - 50</td>
+                            <td data-i18n="price_brinjal_unit">per kg</td>
                         </tr>
                         <tr>
-                            <td>Chili</td>
-                            <td>Green</td>
-                            <td>Dhaka</td>
-                            <td>60 - 120</td>
-                            <td>per kg</td>
+                            <td data-i18n="price_chili">Chili</td>
+                            <td data-i18n="price_chili_variety">Green</td>
+                            <td data-i18n="price_chili_market">Dhaka</td>
+                            <td data-i18n="price_chili_range">60 - 120</td>
+                            <td data-i18n="price_chili_unit">per kg</td>
                         </tr>
                         <tr>
-                            <td>Jute</td>
-                            <td>Raw Jute</td>
-                            <td>Wholesale</td>
-                            <td>75 - 90</td>
-                            <td>per kg</td>
+                            <td data-i18n="price_jute">Jute</td>
+                            <td data-i18n="price_jute_variety">Raw Jute</td>
+                            <td data-i18n="price_jute_market">Wholesale</td>
+                            <td data-i18n="price_jute_range">75 - 90</td>
+                            <td data-i18n="price_jute_unit">per kg</td>
                         </tr>
                         <tr>
-                            <td>Mustard</td>
-                            <td>Seed</td>
-                            <td>Wholesale</td>
-                            <td>110 - 130</td>
-                            <td>per kg</td>
+                            <td data-i18n="price_mustard">Mustard</td>
+                            <td data-i18n="price_mustard_variety">Seed</td>
+                            <td data-i18n="price_mustard_market">Wholesale</td>
+                            <td data-i18n="price_mustard_range">110 - 130</td>
+                            <td data-i18n="price_mustard_unit">per kg</td>
                         </tr>
                         <tr>
-                            <td>Lentil</td>
-                            <td>Local (Masoor)</td>
-                            <td>Dhaka</td>
-                            <td>160 - 180</td>
-                            <td>per kg</td>
+                            <td data-i18n="price_lentil">Lentil</td>
+                            <td data-i18n="price_lentil_variety">Local (Masoor)</td>
+                            <td data-i18n="price_lentil_market">Dhaka</td>
+                            <td data-i18n="price_lentil_range">160 - 180</td>
+                            <td data-i18n="price_lentil_unit">per kg</td>
                         </tr>
                     </tbody>
                 </table>
@@ -144,7 +150,7 @@
 
             <!-- Message about live price updates -->
             <div class="weather-message" style="margin-top: 20px;">
-                <p><strong>Note:</strong> Prices shown are sample market rates. Live market prices will be connected later using FastAPI.</p>
+                <p><strong data-i18n="note">Note:</strong> <span data-i18n="pricing_note">Prices shown are sample market rates. Live market prices will be connected later using FastAPI.</span></p>
             </div>
 
         </div>
@@ -154,30 +160,32 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-section">
-                <h4>Krishok Bondhu</h4>
-                <p>A farmer's friend platform providing agricultural information and services.</p>
+                <h4 data-i18n="site_name">Krishok Bondhu</h4>
+                <p data-i18n="footer_desc">A farmer's friend platform providing agricultural information and services.</p>
             </div>
             <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="crops.html">Crops</a></p>
-                <p><a href="fertilizer.html">Fertilizer Guide</a></p>
-                <p><a href="weather.html">Weather</a></p>
-                <p><a href="disease.html">Disease Detection</a></p>
-                <p><a href="pricing.html">Market Prices</a></p>
+                <h4 data-i18n="footer_quick_links">Quick Links</h4>
+                <p><a href="crops.html" data-i18n="nav_crops">Crops</a></p>
+                <p><a href="fertilizer.html" data-i18n="nav_fertilizer">Fertilizer Guide</a></p>
+                <p><a href="weather.html" data-i18n="nav_weather">Weather</a></p>
+                <p><a href="disease.html" data-i18n="nav_disease">Disease Detection</a></p>
+                <p><a href="pricing.html" data-i18n="nav_pricing">Market Prices</a></p>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Agricultural Information Service</p>
+                <h4 data-i18n="footer_contact">Contact</h4>
+                <p data-i18n="footer_contact_name">Agricultural Information Service</p>
                 <p>support@krishokbondhu.gov.bd</p>
             </div>
         </div>
         <div class="container">
-            <div class="footer-bottom">
+            <div class="footer-bottom" data-i18n="copyright">
                 &copy; 2026 Krishok Bondhu. All rights reserved.
             </div>
         </div>
     </footer>
 
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

@@ -11,8 +11,14 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="header-logo">Krishok Bondhu</div>
-            <p>Farmer's Friend - Agricultural Information Portal</p>
+            <div class="header-left">
+                <div class="header-logo" data-i18n="site_name">Krishok Bondhu</div>
+                <p data-i18n="site_tagline">Farmer's Friend - Agricultural Information Portal</p>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="bn">বাং</button>
+            </div>
         </div>
     </header>
 
@@ -20,12 +26,12 @@
     <nav class="nav">
         <div class="container">
             <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="crops.html">Crops</a></li>
-                <li><a href="fertilizer.html">Fertilizer Guide</a></li>
-                <li><a href="weather.html">Weather</a></li>
-                <li><a href="disease.html">Disease Detection</a></li>
-                <li><a href="pricing.html">Market Prices</a></li>
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="crops.html" data-i18n="nav_crops">Crops</a></li>
+                <li><a href="fertilizer.html" data-i18n="nav_fertilizer">Fertilizer Guide</a></li>
+                <li><a href="weather.html" data-i18n="nav_weather">Weather</a></li>
+                <li><a href="disease.html" data-i18n="nav_disease">Disease Detection</a></li>
+                <li><a href="pricing.html" data-i18n="nav_pricing">Market Prices</a></li>
             </ul>
         </div>
     </nav>
@@ -33,15 +39,15 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Crop Information</h1>
-            <p>Explore detailed information about common crops in Bangladesh.</p>
+            <h1 data-i18n="crops_title">Crop Information</h1>
+            <p data-i18n="crops_subtitle">Explore detailed information about common crops in Bangladesh.</p>
         </div>
     </section>
 
     <!-- Search Box -->
     <section class="search-box">
         <div class="container">
-            <input type="text" id="cropSearch" placeholder="Search crops...">
+            <input type="text" id="cropSearch" data-i18n-placeholder="search_crops_placeholder" placeholder="Search crops...">
         </div>
     </section>
 
@@ -58,52 +64,62 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-section">
-                <h4>Krishok Bondhu</h4>
-                <p>A farmer's friend platform providing agricultural information and services.</p>
+                <h4 data-i18n="site_name">Krishok Bondhu</h4>
+                <p data-i18n="footer_desc">A farmer's friend platform providing agricultural information and services.</p>
             </div>
             <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="crops.html">Crops</a></p>
-                <p><a href="fertilizer.html">Fertilizer Guide</a></p>
-                <p><a href="weather.html">Weather</a></p>
-                <p><a href="disease.html">Disease Detection</a></p>
-                <p><a href="pricing.html">Market Prices</a></p>
+                <h4 data-i18n="footer_quick_links">Quick Links</h4>
+                <p><a href="crops.html" data-i18n="nav_crops">Crops</a></p>
+                <p><a href="fertilizer.html" data-i18n="nav_fertilizer">Fertilizer Guide</a></p>
+                <p><a href="weather.html" data-i18n="nav_weather">Weather</a></p>
+                <p><a href="disease.html" data-i18n="nav_disease">Disease Detection</a></p>
+                <p><a href="pricing.html" data-i18n="nav_pricing">Market Prices</a></p>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Agricultural Information Service</p>
+                <h4 data-i18n="footer_contact">Contact</h4>
+                <p data-i18n="footer_contact_name">Agricultural Information Service</p>
                 <p>support@krishokbondhu.gov.bd</p>
             </div>
         </div>
         <div class="container">
-            <div class="footer-bottom">
+            <div class="footer-bottom" data-i18n="copyright">
                 &copy; 2026 Krishok Bondhu. All rights reserved.
             </div>
         </div>
     </footer>
 
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/crops.js"></script>
     <script src="js/app.js"></script>
     <script>
-        // Load crop cards from cropsData array
-        document.addEventListener('DOMContentLoaded', function() {
+        function renderCropCards() {
             const cropsGrid = document.getElementById('cropsGrid');
+            cropsGrid.innerHTML = '';
+            const lang = I18n.currentLang;
             const crops = getAllCrops();
 
             crops.forEach(crop => {
                 const card = document.createElement('div');
                 card.className = 'crop-card';
+                const nameKey = 'crop_' + crop.nameKey + '_short';
                 card.innerHTML = `
                     <div class="crop-card-image">[ Image Placeholder ]</div>
                     <div class="crop-card-content">
-                        <h3>${crop.name}</h3>
-                        <p>${crop.shortDescription}</p>
-                        <a href="crop.html?id=${crop.id}" class="btn">View Details</a>
+                        <h3>${I18n.t('crop_' + crop.nameKey)}</h3>
+                        <p>${I18n.t(nameKey)}</p>
+                        <a href="crop.html?id=${crop.id}" class="btn" data-i18n="crops_view_details">View Details</a>
                     </div>
                 `;
                 cropsGrid.appendChild(card);
             });
-        });
+        }
+
+        document.addEventListener('DOMContentLoaded', renderCropCards);
+
+        function onLanguageChange() {
+            renderCropCards();
+        }
     </script>
 </body>
 </html>
